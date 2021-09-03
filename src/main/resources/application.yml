@@ -1,3 +1,5 @@
+server:
+  port: 8081
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/user_center
@@ -5,3 +7,11 @@ spring:
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#        namespace: f9d44dbd-2872-4c87-90d2-9d446d6f763f
+#        cluster-name: NJ
+  application:
+    name: user-center
